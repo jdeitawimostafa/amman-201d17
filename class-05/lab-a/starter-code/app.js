@@ -52,11 +52,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-let result1 = a + b + c ;
-let reuslt2 = a * b * c ;
-let statement1 = `${a} and ${b} and ${c} sum to ${result1}.`;
-let statement2 = `The product of ${4} and ${7} and ${5} is ${reuslt2}.`;
-return [result1,reuslt2,statement1,statement2];
+    let sum1 = sum(a,b)[0];
+    let sum2 = sum (sum1,c)[0] ;
+    let multi1 = multiply (a,b)[0];
+    let multi2 = multiply (multi1,c)[0];
+    let statement1 = `${a} and ${b} and ${c} sum to ${sum2}.`;
+    let statement2 = `The product of ${a} and ${b} and ${c} is ${multi2}.`;
+    return[sum2,multi2,statement1,statement2];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
